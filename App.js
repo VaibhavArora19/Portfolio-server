@@ -11,4 +11,7 @@ app.use(bodyParser.json());
 
 app.use(contactRoutes);
 
+app.get('/', (req, res, next) => {
+    res.send('<h1>Welcome to my backend. Now git out!</h1>');
+})
 app.listen(process.env.PORT || 8080, console.log('Listening on port 8080'));
